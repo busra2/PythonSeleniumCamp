@@ -20,3 +20,8 @@ human2 = Human("halit")
 human2.talk("Selam")
 human2.walk()
 
+#selenium import etmek için 
+#pip install selenium
+import selenium
+
+
