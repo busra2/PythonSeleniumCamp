@@ -22,6 +22,9 @@ human2.walk()
 
 #selenium import etmek için 
 #pip install selenium
+
 import selenium
+# selenium inmesine rağmen hata alıyordum. Default python uzantısını değiştirerek çözüldü sorun.
+
 
 
