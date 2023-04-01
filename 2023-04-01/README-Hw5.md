@@ -6,4 +6,5 @@
 
 **Ekran Görüntüsü**
 
-![Screen Shot 2023-04-01 at 12 26 07](https://user-images.githubusercontent.com/115122063/229278142-d82a73c4-4dc1-4745-9a09-b78bc2c8f4e9.png)
+
+![Screen Shot 2023-04-01 at 12 45 20](https://user-images.githubusercontent.com/115122063/229278889-1018ecfb-52a2-4f71-8388-c4234fdaccfc.png)
