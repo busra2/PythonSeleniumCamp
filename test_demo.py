@@ -59,14 +59,15 @@ class Test_DemoClass:
         assert errorMessage.text=="Epic sadface: Username is required"
         
 #Sadece şifre alanı boş geçildiğinde
-    def test_empty_password(self):
+    @pytest.mark.parametrize("username,password",[("ad1",""),("ad2",""),("ad3","")] )
+    def test_empty_password(self,username,password):
         self.waitForElementVisible((By.ID,"user-name"))
         usernameInput = self.driver.find_element(By.ID, "user-name")
-        self.waitForElementVisible((By.ID,"password"))
+        self.waitForElementVisible((By.ID,"password"),10)
         passwordInput = self.driver.find_element(By.ID,"password")
         
-        usernameInput.send_keys("user name")
-        passwordInput.send_keys("")
+        usernameInput.send_keys(username)
+        passwordInput.send_keys(password)
         
         loginBtn=self.driver.find_element(By.ID,"login-button")
         loginBtn.click()
@@ -137,6 +138,7 @@ class Test_DemoClass:
         self.driver.execute_script("window.scrollTo(0,500)")
         self.driver.save_screenshot(f"{self.folderPath}/number-of-products-{len(listOfProducts)}.png")
         assert True
+        
         
         
         
