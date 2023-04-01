@@ -1,6 +1,6 @@
 # PyTest Decorator Ödevi 
 ```
-@pytest.mark.skip:
+@pytest.mark.skip
 ```
 Bu dekoratör, test fonksiyonlarını atlamak için kullanılır. Bu, test senaryolarının bazı koşullar altında çalıştırılmamasını sağlar.
 
