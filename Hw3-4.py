@@ -11,12 +11,13 @@
 # Kullanıcı adı "standard_user" şifre "secret_sauce" gönderildiğinde kullanıcı "/inventory.html" sayfasına gönderilmelidir.
 #Giriş yapıldıktan sonra kullanıcıya gösterilen ürün sayısı "6" adet olmalıdır.
 
+
 from selenium import webdriver
 from time import sleep
 from selenium.webdriver.common.by import By
 
 
-
+#?class adları by ile yazılan 
 
 class Test_Sauce:
 
@@ -158,7 +159,7 @@ class Test_Sauce:
         driver.get("https://www.saucedemo.com/inventory.html")
         sleep(5)
 
-        
+
 #Giriş yapıldıktan sonra kullanıcıya gösterilen ürün sayısı "6" adet olmalıdır
     def products(self):
         driver = webdriver.Safari()
