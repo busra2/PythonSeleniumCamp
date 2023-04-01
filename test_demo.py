@@ -138,13 +138,6 @@ class Test_DemoClass:
         self.driver.execute_script("window.scrollTo(0,500)")
         self.driver.save_screenshot(f"{self.folderPath}/number-of-products-{len(listOfProducts)}.png")
         assert True
-        
-        
-        
-        
-        
-        
-        
     
   
     def waitForElementVisible(self,locator,timeout=5):
