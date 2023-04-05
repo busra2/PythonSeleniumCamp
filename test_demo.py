@@ -7,6 +7,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 import pytest
 from pathlib import Path
 from datetime import date
+import openpyxl
 
 
 
@@ -24,9 +25,25 @@ class Test_DemoClass:
     #her testten sonra çağırılır
     def teardown_method(self):
         self.driver.quit()
+        
+    def getData():
+        # veriyi al
+        excelFile = openpyxl.load_workbook("data/invalid_login .xlsx")
+        selectedSheet = excelFile["Sheet1"]
+
+        totalRows = selectedSheet.max_row
+        data = []
+        for i in range(2, totalRows+1):
+            username = selectedSheet.cell(i, 1).value
+            # içerisindeki değeri value ile okuyorz.
+            password = selectedSheet.cell(i, 2).value
+            tupleData = (username, password)
+            data.append(tupleData)
+        return data
 
     
-    @pytest.mark.parametrize("username,password",[("1","1") , ("kullaniciadım","sifrem")])
+    
+    @pytest.mark.parametrize("username,password",getData())
     def test_invalid_login(self,username,password):
         self.waitForElementVisible((By.ID,"user-name"))
         usernameInput = self.driver.find_element(By.ID, "user-name")
