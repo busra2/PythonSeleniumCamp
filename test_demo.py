@@ -8,6 +8,7 @@ import pytest
 from pathlib import Path
 from datetime import date
 import openpyxl
+from constants import globalConstants 
 
 
 
@@ -16,7 +17,7 @@ class Test_DemoClass:
     def setup_method(self):
         self.driver = webdriver.Safari()
         self.driver.maximize_window()
-        self.driver.get("https://www.saucedemo.com")
+        self.driver.get(globalConstants .URL)
         self.folderPath = str(date.today())
         Path(self.folderPath).mkdir(exist_ok=True)
        

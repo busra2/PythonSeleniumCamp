@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.action_chains import ActionChains
-#4from constants import globalConstants
+from constants import globalConstants
 
 class Test_Sauce:
     def __init__(self):
