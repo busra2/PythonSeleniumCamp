@@ -160,3 +160,5 @@ class Test_DemoClass:
   
     def waitForElementVisible(self,locator,timeout=5):
         WebDriverWait(self.driver,timeout).until(ec.visibility_of_element_located(locator))
+        
+    
